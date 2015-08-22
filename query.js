@@ -1,14 +1,13 @@
 //Keep nav bar in view at the top of the window scroll edge
 $(document).ready( function() {
-
     $(window).scroll( function() {
         if ($(window).scrollTop() > $('#header').offset().top)
             $('.navImage').addClass('floating');
         else
             $('.navImage').removeClass('floating');
-    } );
+    });
 
-} );
+});
 
 //Allow user-interaction of slide switching
 $('#introTab').on({
@@ -38,7 +37,6 @@ $('#introTab').on({
 var count = 1;
 
 function transition() {
-
 	if (count === 1) {
 		$("#slide").attr("src", "flyingBird.jpg");
 		count = 2;
@@ -48,6 +46,6 @@ function transition() {
 	} else if (count === 3) {
 		$("#slide").attr("src", "lightForest.jpg")
 		count = 1;
-	}
+	};
 }
 setInterval(transition, 5000);
